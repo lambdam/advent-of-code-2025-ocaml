@@ -19,7 +19,9 @@
  (name advent-of-code-2025-ocaml)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml)
+ (depends
+   ocaml
+   containers)
  (tags
   ("add topics" "to describe" your project)))
 
