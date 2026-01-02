@@ -21,7 +21,8 @@
  (description "A longer description")
  (depends
    ocaml
-   containers)
+   containers
+   ppx_deriving)
  (tags
   ("add topics" "to describe" your project)))
 
