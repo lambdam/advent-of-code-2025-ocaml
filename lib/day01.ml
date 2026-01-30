@@ -16,9 +16,11 @@ let parse_input path =
       | _ -> failwith "Bad input")
   |> Seq.to_list
 
-let input_sample = parse_input "../inputs/day01.sample.txt"
 
+(*
+let input_sample = parse_input "../inputs/day01.sample.txt"
 let input = parse_input "../inputs/day01.txt"
+*)
 
 let inverse_pos pos =
   (100 - pos) mod 100

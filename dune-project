@@ -22,7 +22,8 @@
  (depends
    ocaml
    containers
-   ppx_deriving)
+   ppx_deriving
+  (alcotest :with-test))
  (tags
   ("add topics" "to describe" your project)))
 

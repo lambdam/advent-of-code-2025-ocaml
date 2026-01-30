@@ -1,2 +1,4 @@
 (library
- (name advent_of_code_2025_ocaml))
+ (name advent_of_code_2025_ocaml)
+ (libraries containers)
+ (preprocess (pps ppx_deriving.show)))
