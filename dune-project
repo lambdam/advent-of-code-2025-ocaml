@@ -1,4 +1,4 @@
-(lang dune 3.20)
+(lang dune 3.21)
 
 (name advent-of-code-2025-ocaml)
 
