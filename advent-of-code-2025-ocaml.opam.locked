@@ -1,0 +1,66 @@
+opam-version: "2.0"
+name: "advent-of-code-2025-ocaml"
+version: "dev"
+synopsis: "A short synopsis"
+description: "A longer description"
+maintainer: "Maintainer Name <maintainer@example.com>"
+authors: "Author Name <author@example.com>"
+license: "LICENSE"
+tags: ["add topics" "to describe" "your" "project"]
+homepage: "https://github.com/username/reponame"
+doc: "https://url/to/documentation"
+bug-reports: "https://github.com/username/reponame/issues"
+depends: [
+  "alcotest" {= "1.9.1" & with-test}
+  "astring" {= "0.8.5" & with-test}
+  "base-bigarray" {= "base"}
+  "base-domains" {= "base"}
+  "base-effects" {= "base"}
+  "base-nnp" {= "base"}
+  "base-threads" {= "base"}
+  "base-unix" {= "base"}
+  "cmdliner" {= "2.1.0" & with-test}
+  "containers" {= "3.18"}
+  "cppo" {= "1.8.0"}
+  "csexp" {= "1.5.2"}
+  "dune" {= "3.21.1"}
+  "dune-configurator" {= "3.21.1"}
+  "either" {= "1.0.0"}
+  "fmt" {= "0.11.0" & with-test}
+  "ocaml" {= "5.4.1"}
+  "ocaml-compiler" {= "5.4.1"}
+  "ocaml-compiler-libs" {= "v0.17.0"}
+  "ocaml-config" {= "3"}
+  "ocaml-syntax-shims" {= "1.0.0" & with-test}
+  "ocaml-variants" {= "5.4.1+options"}
+  "ocamlbuild" {= "0.16.1" & with-test}
+  "ocamlfind" {= "1.9.8"}
+  "ppx_derivers" {= "1.2.1"}
+  "ppx_deriving" {= "6.1.1"}
+  "ppxlib" {= "0.37.0"}
+  "re" {= "1.14.0" & with-test}
+  "sexplib0" {= "v0.17.0"}
+  "stdlib-shims" {= "0.3.0"}
+  "topkg" {= "1.1.1" & with-test}
+  "uutf" {= "1.0.4" & with-test}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/username/reponame.git"
+pin-depends: [
+  "ppxlib.0.37.0"
+  "git+https://github.com/ocaml-ppx/ppxlib#132fbd715830d729f5934c7af85f3a7c4ee08b48"
+]
+x-maintenance-intent: ["(latest)"]
