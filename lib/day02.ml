@@ -104,6 +104,19 @@ let get_input_pairs input =
   |> flatten
 [@@warning "-32"]
 
+(* TODO: continue here *)
+let get_divisors (n: int) =
+  Seq.fold_left (fun acc x -> if x mod n = 0 then (x :: acc) else acc)
+    [] (Seq.range 1 n)
+
+
+(* let _ = get_divisors 5 *)
+
+(* let get_part_2 (ranges: (int * int) list) = *)
+
+
 (*
 let _ = [{start = 11; stop = 22222}] |> get_input_pairs
+let _ = parse_input "../inputs/day02.sample.txt" |> get_input_pairs
+let _ = parse_input "../inputs/day02.txt" |> get_input_pairs
 *)
